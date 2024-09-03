@@ -1,0 +1,626 @@
+body {
+    background-color: black;
+    overflow: visible;
+    user-select: none;
+    font-family:  Calibri;
+}
+
+#Time {
+    color: white;
+    text-align: right;
+    font-size: 30px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.tabs {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100px;
+}
+
+#Main-tab {
+    width: auto;
+    background-color: red;
+    font-size: 25px;
+    padding: 0 10px;
+    color: white;
+}
+
+#Main-tab:hover {
+    background-color: rgb(219, 1, 1);
+    cursor: pointer;
+    border: 3px solid yellow;
+}
+
+#Options-tab {
+    width: auto;
+    background-color: grey;
+    font-size: 25px;
+    padding: 0 10px;
+    color: white;
+}
+
+#Options-tab:hover {
+    background-color: rgb(91, 91, 91);
+    cursor: pointer;
+    border: 3px solid yellow;
+}
+
+.content {
+    display: none;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.content.active {
+    display: block;
+}
+
+#Time-generator {
+    margin-top: 50px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+#tg-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(0, 55, 255);
+    position: absolute;
+    left: 15;
+}
+
+#ta-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(0, 213, 255);
+    position: absolute;
+    left: 15;
+}
+
+#tj-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(0, 255, 0);
+    position: absolute;
+    left: 15;
+}
+
+#ts-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(208, 255, 0);
+    position: absolute;
+    left: 15;
+}
+
+#tc-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(255, 162, 0);
+    position: absolute;
+    left: 15;
+}
+
+#tp-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(255, 0, 4);
+    position: absolute;
+    left: 15;
+}
+
+#tl-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(255, 0, 162);
+    position: absolute;
+    left: 15;
+}
+
+#td-img {
+    height: 30px;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 150px;
+    background-color: rgb(200, 0, 255);
+    position: absolute;
+    left: 15;
+}
+
+#comma {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 58px;
+    margin-bottom: 21px;
+}
+
+#comma3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 53px;
+    margin-bottom: 21px;
+}
+
+#comma4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 50px;
+    margin-bottom: 21px;
+}
+
+#comma5 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 48px;
+    margin-bottom: 21px;
+}
+
+#comma6 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 45px;
+    margin-bottom: 21px;
+}
+
+#comma7 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 42px;
+    margin-bottom: 21px;
+}
+
+#comma8 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 39px;
+    margin-bottom: 21px;
+}
+
+#t2 {
+    margin-right: 16px;
+}
+
+#t3 {
+    margin-right: 25px;
+}
+
+#t4 {
+    margin-right: 37px;
+}
+
+#t5 {
+    margin-right: 48px;
+}
+
+#t6 {
+    margin-right: 59px;
+}
+
+#t7 {
+    margin-right: 70px;
+}
+
+#t8 {
+    margin-right: 81px;
+}
+
+#tg-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    font-style: italic;
+}
+
+#tg-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(0, 64, 255);
+}
+
+#tg-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(0, 64, 255);
+}
+
+#tg-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(0, 64, 255);
+}
+
+#tg-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(0, 64, 255);
+    border: 4px solid rgb(0, 64, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-accelerator {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#ta-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#ta-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(0, 213, 255);
+}
+
+#ta-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(0, 213, 255);
+}
+
+#ta-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(0, 213, 255);
+}
+
+#ta-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(0, 213, 255);
+    border: 4px solid rgb(0, 213, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-jolter {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tj-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#tj-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(0, 255, 0);
+}
+
+#tj-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(0, 255, 0);
+}
+
+#tj-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(0, 255, 0);
+}
+
+#tj-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(0, 255, 0);
+    border: 4px solid rgb(0, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-snapper {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#ts-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#ts-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(208, 255, 0);
+}
+
+#ts-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(208, 255, 0);
+}
+
+#ts-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(208, 255, 0);
+}
+
+#ts-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(208, 255, 0);
+    border: 4px solid rgb(208, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-cracker {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tc-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#tc-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(255, 162, 0);
+}
+
+#tc-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(255, 162, 0);
+}
+
+#tc-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(255, 162, 0);
+}
+
+#tc-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(255, 162, 0);
+    border: 4px solid rgb(255, 162, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-popper {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tp-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#tp-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(255, 0, 4);
+}
+
+#tp-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(255, 0, 4);
+}
+
+#tp-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(255, 0, 4);
+}
+
+#tp-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(255, 0, 4);
+    border: 4px solid rgb(255, 0, 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-locker {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tl-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#tl-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(255, 0, 162);
+}
+
+#tl-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(255, 0, 162);
+}
+
+#tl-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(255, 0, 162);
+}
+
+#tl-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(255, 0, 162);
+    border: 4px solid rgb(255, 0, 162);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Time-dropper {
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#td-name {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+    color: white;
+    font-style: italic;
+}
+
+#td-mult {
+    position: absolute;
+    left: 550;
+    font-size: 20px;
+    color: rgb(200, 0, 255);
+}
+
+#td-amt {
+    position: absolute;
+    right: 450;
+    color: rgb(200, 0, 255);
+}
+
+#td-bought {
+    position: absolute;
+    right: 350;
+    color: rgb(200, 0, 255);
+}
+
+#td-cost {
+    position: absolute;
+    height: 30px;
+    right: 15;
+    width: 250px;
+    color: rgb(200, 0, 255);
+    border: 4px solid rgb(200, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
