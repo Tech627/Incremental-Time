@@ -55,6 +55,6 @@ function BuyTG() {
         player.seconds = player.seconds.sub(player.tg.cost)
         player.tg.bought = player.tg.bought.add(1)
         player.tg.amt = player.tg.amt.add(1)
-        player.tg.mult = player.tg.mult.add(new Decimal(2).slog())
+        player.tg.mult = player.tg.mult.add(new Decimal(2).pow(0.1).sub(1))
     }
 }

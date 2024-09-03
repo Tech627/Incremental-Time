@@ -32,6 +32,9 @@ function GameLoop() {
     document.getElementById("tp-cost").textContent = format(player.tp.cost, precision = 0) + "s"
     document.getElementById("tl-cost").textContent = format(player.tl.cost, precision = 0) + "s"
     document.getElementById("td-cost").textContent = format(player.td.cost, precision = 0) + "s"
+    tgAmt = player.tg.amt
+    tgPower = tgAmt.mul(player.tg.mult)
+    player.seconds = player.seconds.add(tgPower.div(33))
     player.tg.cost = new Decimal(10).mul(new Decimal(2).pow(player.tg.bought))
     player.ta.cost = new Decimal(20).mul(new Decimal(4).pow(player.ta.bought))
     player.tj.cost = new Decimal(80).mul(new Decimal(8).pow(player.tj.bought))
