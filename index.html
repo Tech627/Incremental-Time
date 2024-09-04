@@ -5,13 +5,18 @@
     <link rel="stylesheet" href="styles.css">
     <title>Incremental Time</title>
 </head>
-<body>  
+<body onload="Get()">  
     <div id="Time"> You have 0 seconds. </div>
     <div class="tabs">
         <div class="tab-btn" id="Main-tab"> Main </div>
         <div class="tab-btn" id="Options-tab"> Settings </div>
     </div>
     <div class="content">
+        <div id="Booster">
+            <div id="booster-img"> >> </div>
+            <div id="booster-mult"> 1x to all of the generators </div>
+            <div id="booster-cost" onclick="BuyBooster()"> 1s </div>
+        </div>
         <div id="Time-generator">
             <div id="tg-img">
                 <div id="comma">,</div>
@@ -32,7 +37,7 @@
             <div id="ta-mult"> 1x </div>
             <div id="ta-amt"> 0 </div>
             <div id="ta-bought"> [0] </div>
-            <div id="ta-cost"> 1s </div>
+            <div id="ta-cost" onclick="BuyTA()"> 1s </div>
         </div>
         <div id="Time-jolter">
             <div id="tj-img">
@@ -43,7 +48,7 @@
             <div id="tj-mult"> 1x </div>
             <div id="tj-amt"> 0 </div>
             <div id="tj-bought"> [0] </div>
-            <div id="tj-cost"> 1s </div>
+            <div id="tj-cost" onclick="BuyTJ()"> 1s </div>
         </div>
         <div id="Time-snapper">
             <div id="ts-img">
@@ -54,7 +59,7 @@
             <div id="ts-mult"> 1x </div>
             <div id="ts-amt"> 0 </div>
             <div id="ts-bought"> [0] </div>
-            <div id="ts-cost"> 1s </div>
+            <div id="ts-cost" onclick="BuyTS()"> 1s </div>
         </div>
         <div id="Time-cracker">
             <div id="tc-img">
@@ -65,7 +70,7 @@
             <div id="tc-mult"> 1x </div>
             <div id="tc-amt"> 0 </div>
             <div id="tc-bought"> [0] </div>
-            <div id="tc-cost"> 1s </div>
+            <div id="tc-cost" onclick="BuyTC()"> 1s </div>
         </div>
         <div id="Time-popper">
             <div id="tp-img">
@@ -76,7 +81,7 @@
             <div id="tp-mult"> 1x </div>
             <div id="tp-amt"> 0 </div>
             <div id="tp-bought"> [0] </div>
-            <div id="tp-cost"> 1s </div> 
+            <div id="tp-cost" onclick="BuyTP()"> 1s </div> 
         </div>
         <div id="Time-locker">
             <div id="tl-img">
@@ -87,7 +92,7 @@
             <div id="tl-mult"> 1x </div>
             <div id="tl-amt"> 0 </div>
             <div id="tl-bought"> [0] </div>
-            <div id="tl-cost"> 1s </div>
+            <div id="tl-cost" onclick="BuyTL()"> 1s </div>
         </div>
         <div id="Time-dropper">
             <div id="td-img">
@@ -98,11 +103,29 @@
             <div id="td-mult"> 1x </div>
             <div id="td-amt"> 0 </div>
             <div id="td-bought"> [0] </div>
-            <div id="td-cost"> 1s </div>
+            <div id="td-cost" onclick="BuyTD()"> 1s </div>
         </div>
     </div>
-    <div class="content">
-
+    <div class="content" id="Settings-content">
+        <div id="sub-sc">
+            <div id="Import"> Import/Load </div>
+            <div id="Export"> Export </div>
+            <div id="Save"> Save </div>
+            <div id="Hard-reset" onclick="HardReset()"> HARD RESET </div>
+            <div id="Time-units"> Time Units: 
+                <br>Always show seconds.
+                <br>(1)
+            </div>
+            <div id="Offline-progress"> Offline Progress:       
+                <br>On/Off 
+            </div>
+            <div id="PoNBN"> Precision of Number before notation:
+                <br>(3, 6, 9, 12, 15)    
+            </div>
+            <div id="Notation"> Notation:
+                <br>Scientific    
+            </div>
+        </div>
     </div>
 </body>
 <script src="JS/breaketernity.js"></script>
@@ -110,4 +133,5 @@
 <script src="JS/main.js"></script>
 <script src="JS/Gameloop.js"></script>
 <script src="JS/tabs.js"></script>
+<script src="JS/save.js"></script>
 </html>

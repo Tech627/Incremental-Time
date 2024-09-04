@@ -53,7 +53,6 @@ body {
 
 .content {
     display: none;
-    margin-top: 50px;
     width: 100%;
 }
 
@@ -61,8 +60,46 @@ body {
     display: block;
 }
 
+#Booster {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#booster-img {
+    width: 100px;
+    height: 30px;
+    font-size: 35px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15;
+}
+
+#booster-mult {
+    position: absolute;
+    left: 200;
+    font-size: 25px;
+}
+
+#booster-cost {
+    position: absolute;
+    right: 15;
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+}
+
 #Time-generator {
-    margin-top: 50px;
     width: 100%;
     height: 70px;
     display: flex;
@@ -623,4 +660,126 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#Settings-content {
+    max-width: max-content;
+    margin-inline: auto;
+}
+
+#sub-sc {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#Import {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#Export {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#Save {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#Hard-reset {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 0, 0);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#Time-units {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#Offline-progress {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#PoNBN {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#Notation {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 216, 216);
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 15px;
 }
