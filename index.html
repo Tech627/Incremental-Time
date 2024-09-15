@@ -7,8 +7,13 @@
 </head>
 <body onload="Get()">  
     <div id="Time"> You have 0 seconds. </div>
+    <div id="Universe-reset" onclick="UniReset()">
+        <div id="uni-desc"> Consolidate your generators and your time for 0 universes. </div>
+    </div>
     <div class="tabs">
         <div class="tab-btn" id="Main-tab"> Main </div>
+        <div class="tab-btn" id="Universe-tab"> Universe </div>
+        <div class="tab-btn" id="Upgrades-tab"> Upgrades </div>
         <div class="tab-btn" id="Options-tab"> Settings </div>
     </div>
     <div class="content">
@@ -106,11 +111,110 @@
             <div id="td-cost" onclick="BuyTD()"> 1s </div>
         </div>
     </div>
+    <div class="content" id="Universe-content">
+        <div id="Uni-count"> You have 0 Universes. </div>
+        <div id="Uni-boost"> You have <span id="Universal-power">0</span> universal power, which, when raised to 
+        <span id="Uni-exponent">1</span>, make your generators <span id="Uni-mult">1x</span> faster. 
+        (all generators including the universal power will reset during a universal reset) </div>
+        <div id="Power-gens">
+            <div id="Power-Generator">
+                <div id="pg-img">
+                    <div id="dot">.</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pg-name"> Power Generator </div>
+                <div id="pg-mult"> 1x </div>
+                <div id="pg-amt"> 0 </div>
+                <div id="pg-bought"> [0] </div>
+                <div id="pg-cost" onclick="BuyPG()"> 1 uni </div>
+            </div>
+            <div id="Power-Accelerator">
+                <div id="pa-img">
+                    <div id="dot2">..</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pa-name"> Power Accelerator </div>
+                <div id="pa-mult"> 1x </div>
+                <div id="pa-amt"> 0 </div>
+                <div id="pa-bought"> [0] </div>
+                <div id="pa-cost" onclick="BuyPA()"> 1 uni </div>
+            </div>
+            <div id="Power-Jolter">
+                <div id="pj-img">
+                    <div id="dot3">...</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pj-name"> Power Jolter </div>
+                <div id="pj-mult"> 1x </div>
+                <div id="pj-amt"> 0 </div>
+                <div id="pj-bought"> [0] </div>
+                <div id="pj-cost" onclick="BuyPJ()"> 1 uni </div>
+            </div>
+            <div id="Power-Snapper">
+                <div id="ps-img">
+                    <div id="dot4">....</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="ps-name"> Power Snapper </div>
+                <div id="ps-mult"> 1x </div>
+                <div id="ps-amt"> 0 </div>
+                <div id="ps-bought"> [0] </div>
+                <div id="ps-cost" onclick="BuyPS()"> 1 uni </div>
+            </div>
+            <div id="Power-Cracker">
+                <div id="pc-img">
+                    <div id="dot5">.....</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pc-name"> Power Cracker </div>
+                <div id="pc-mult"> 1x </div>
+                <div id="pc-amt"> 0 </div>
+                <div id="pc-bought"> [0] </div>
+                <div id="pc-cost" onclick="BuyPC()"> 1 uni </div>
+            </div>
+            <div id="Power-Popper">
+                <div id="pp-img">
+                    <div id="dot6">......</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pp-name"> Power Popper </div>
+                <div id="pp-mult"> 1x </div>
+                <div id="pp-amt"> 0 </div>
+                <div id="pp-bought"> [0] </div>
+                <div id="pp-cost" onclick="BuyPP()"> 1 uni </div>
+            </div>
+            <div id="Power-Locker">
+                <div id="pl-img">
+                    <div id="dot7">.......</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pl-name"> Power Locker </div>
+                <div id="pl-mult"> 1x </div>
+                <div id="pl-amt"> 0 </div>
+                <div id="pl-bought"> [0] </div>
+                <div id="pl-cost" onclick="BuyPL()"> 1 uni </div>
+            </div>
+            <div id="Power-Dropper">
+                <div id="pd-img">
+                    <div id="dot8">........</div>
+                    <div id="p">p</div>
+                </div>
+                <div id="pd-name"> Power Dropper </div>
+                <div id="pd-mult"> 1x </div>
+                <div id="pd-amt"> 0 </div>
+                <div id="pd-bought"> [0] </div>
+                <div id="pd-cost" onclick="BuyPD()"> 1 uni </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="Upgrades-content">
+
+    </div>
     <div class="content" id="Settings-content">
         <div id="sub-sc">
             <div id="Import"> Import/Load </div>
             <div id="Export"> Export </div>
-            <div id="Save"> Save </div>
+            <div id="Save" onclick="Save()"> Save </div>
             <div id="Hard-reset" onclick="HardReset()"> HARD RESET </div>
             <div id="Time-units"> Time Units: 
                 <br>Always show seconds.
@@ -132,6 +236,7 @@
 <script src="JS/notation.js"></script>
 <script src="JS/main.js"></script>
 <script src="JS/Gameloop.js"></script>
+<script src="JS/Universe.js"></script>
 <script src="JS/tabs.js"></script>
 <script src="JS/save.js"></script>
 </html>

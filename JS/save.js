@@ -78,25 +78,25 @@ function Get() {
             player.tg.amt = new Decimal(JSON.parse(SavedTgAmt))
         }
         if(SavedTaAmt) {
-            player.ta.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.ta.amt = new Decimal(JSON.parse(SavedTaAmt))
         }
         if(SavedTjAmt) {
-            player.tj.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.tj.amt = new Decimal(JSON.parse(SavedTjAmt))
         }
         if(SavedTsAmt) {
-            player.ts.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.ts.amt = new Decimal(JSON.parse(SavedTsAmt))
         }
         if(SavedTcAmt) {
-            player.tc.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.tc.amt = new Decimal(JSON.parse(SavedTcAmt))
         }
         if(SavedTpAmt) {
-            player.tp.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.tp.amt = new Decimal(JSON.parse(SavedTpAmt))
         }
         if(SavedTlAmt) {
-            player.tl.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.tl.amt = new Decimal(JSON.parse(SavedTlAmt))
         }
         if(SavedTdAmt) {
-            player.td.amt = new Decimal(JSON.parse(SavedTgAmt))
+            player.td.amt = new Decimal(JSON.parse(SavedTdAmt))
         }
         if(SavedTgMult) {
             player.tg.mult = new Decimal(JSON.parse(SavedTgMult))
