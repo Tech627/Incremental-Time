@@ -55,10 +55,50 @@ let Universe = {
     },
 }
 
+let Uni_ups = {
+    up1: {
+        bought: false,
+        cost: new Decimal(2),
+    },
+    up2: {
+        bought: new Decimal(0),
+        cost: new Decimal(10),
+    },
+    up3: {
+        bought: false,
+        cost: new Decimal(100),
+    },
+    up4: {
+        bought: false,
+        cost: new Decimal(250),
+    },
+    up5: {
+        bought: new Decimal(0),
+        cost: new Decimal(500),
+    },
+    up6: {
+        bought: new Decimal(0),
+        cost: new Decimal(1000),
+        level: new Decimal(0),
+    },
+    up7: {
+        bought: false,
+        cost: new Decimal(25000),
+    },
+}
+
 function UniReset() {
     if(Universe.Uni_reset_count.gte(1)) {
         Universe.Universes = Universe.Uni_reset_count
         Universe.Uni_reset_count = new Decimal(0)
+        Universe.pg.amt = new Decimal(0)
+        Universe.pa.amt = new Decimal(0)
+        Universe.pj.amt = new Decimal(0)
+        Universe.ps.amt = new Decimal(0)
+        Universe.pc.amt = new Decimal(0)
+        Universe.pp.amt = new Decimal(0)
+        Universe.pl.amt = new Decimal(0)
+        Universe.pd.amt = new Decimal(0)
         Universe.unl = true
     }
 }
@@ -132,5 +172,55 @@ function BuyPD() {
         Universe.pd.amt = Universe.pd.amt.add(1)
         Universe.pd.bought = Universe.pd.bought.add(1)
         Universe.pd.mult = Universe.pd.mult.mul(new Decimal(0.04).add(1))
+    }
+}
+
+function BuyUp1() {
+    if(Universe.Universes.gte(Uni_ups.up1.cost) && Uni_ups.up1.bought === false) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up1.cost)
+        Uni_ups.up1.bought = true
+    } 
+}
+
+function BuyUp2() {
+    if(Universe.Universes.gte(Uni_ups.up2.cost)) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up2.cost)
+        Uni_ups.up2.bought = Uni_ups.up2.bought.add(1)
+    }
+}
+
+function BuyUp3() {
+    if(Universe.Universes.gte(Uni_ups.up3.cost) && Uni_ups.up3.bought === false) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up3.cost)
+        Uni_ups.up3.bought = true
+    }
+}
+
+function BuyUp4() {
+    if(Universe.Universes.gte(Uni_ups.up4.cost) && Uni_ups.up4.bought === false) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up4.cost)
+        Uni_ups.up4.bought = true
+    }
+}
+
+function BuyUp5() {
+    if(Universe.Universes.gte(Uni_ups.up5.cost)) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up5.cost)
+        Uni_ups.up5.bought = Uni_ups.up5.bought.add(1)
+    }
+}
+
+function BuyUp6() {
+    if(Universe.Universes.gte(Uni_ups.up6.cost)) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up6.cost)
+        Uni_ups.up6.bought = Uni_ups.up6.bought.add(1)
+        Uni_ups.up6.level = Uni_ups.up6.level.add(1)
+    }
+}
+
+function BuyUp7() {
+    if(Universe.Universes.gte(Uni_ups.up7.cost) && Uni_ups.up7.bought === false) {
+        Universe.Universes = Universe.Universes.sub(Uni_ups.up7.cost)
+        Uni_ups.up7.bought = true
     }
 }
